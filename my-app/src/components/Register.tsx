@@ -25,9 +25,10 @@ function Register({ onSwitch }: RegisterProps) {
         <input
           id="name"
           type="text"
+          placeholder="Jane Doe"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#00ef63]"
+          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-red-600"
         />
 
         <label htmlFor="email" className="mb-2 block font-semibold text-[#0b1a2e]">
@@ -36,9 +37,10 @@ function Register({ onSwitch }: RegisterProps) {
         <input
           id="email"
           type="email"
+          placeholder="name@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#00ef63]"
+          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-red-600"
         />
 
         <label htmlFor="password" className="mb-2 block font-semibold text-[#0b1a2e]">
@@ -47,14 +49,15 @@ function Register({ onSwitch }: RegisterProps) {
         <input
           id="password"
           type="password"
+          placeholder="Create a password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="mb-8 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#00ef63]"
+          className="mb-8 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-red-600"
         />
 
         <button
           type="submit"
-          className="w-full rounded-xl bg-[#00ef63] py-4 text-lg font-bold text-[#0b1a2e] hover:opacity-90"
+          className="w-full rounded-none bg-red-600 py-4 text-lg font-bold text-white hover:bg-red-700"
         >
           Register Now
         </button>
@@ -62,7 +65,7 @@ function Register({ onSwitch }: RegisterProps) {
 
       <p className="mt-6 text-center text-gray-500">
         Already have an account?{" "}
-        <button onClick={onSwitch} className="font-semibold text-[#00ef63]">
+        <button onClick={onSwitch} className="font-semibold text-red-600">
           Log in
         </button>
       </p>

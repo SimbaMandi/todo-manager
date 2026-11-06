@@ -24,9 +24,10 @@ function Login({ onSwitch }: LoginProps) {
         <input
           id="email"
           type="email"
+          placeholder="name@example.com"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#00ef63]"
+          className="mb-6 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-red-600"
         />
 
         <label htmlFor="password" className="mb-2 block font-semibold text-[#0b1a2e]">
@@ -35,14 +36,15 @@ function Login({ onSwitch }: LoginProps) {
         <input
           id="password"
           type="password"
+          placeholder="Enter your password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="mb-8 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-[#00ef63]"
+          className="mb-8 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-red-600"
         />
 
         <button
           type="submit"
-          className="w-full rounded-xl bg-[#00ef63] py-4 text-lg font-bold text-[#0b1a2e] hover:opacity-90"
+          className="w-full rounded-none bg-red-600 py-4 text-lg font-bold text-white hover:bg-red-700"
         >
           Log In
         </button>
@@ -50,7 +52,7 @@ function Login({ onSwitch }: LoginProps) {
 
       <p className="mt-6 text-center text-gray-500">
         Don't have an account?{" "}
-        <button onClick={onSwitch} className="font-semibold text-[#00ef63]">
+        <button onClick={onSwitch} className="font-semibold text-red-600">
           Register
         </button>
       </p>
